@@ -38,7 +38,7 @@ export async function filteredCarsPage(context) {
         const searchValue = Number(new FormData(event.target).get('search'));
 
         context.renderContent(until(returnSearchResultsTemplate(searchValue), loaderTemplate()));
-        context.page.redirect('/search?query=' + searchValue);
+        context.page.redirect('/search?year=' + searchValue);
     }
 
 }
